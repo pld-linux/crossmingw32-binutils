@@ -5,9 +5,6 @@ Version:	2.11.92.0.10
 Release:	2
 License:	GPL
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 ExclusiveArch:	%{ix86}
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
 Patch0:		binutils-info.patch
