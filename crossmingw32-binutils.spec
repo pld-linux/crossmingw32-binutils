@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 # [the same applies to binutils 2.10.1.0.4]
 
 # ldscripts won't be generated properly if SHELL is not bash...
-%{?debug:CFLAGS="-g -O" LDFLAGS=""}%{!?debug:CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"} \
+%{?debug:CFLAGS="-g -O0" LDFLAGS=""}%{!?debug:CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"} \
 CONFIG_SHELL="/bin/bash" \
 ./configure \
 	--prefix=%{_prefix} \
