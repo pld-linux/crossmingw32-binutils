@@ -16,6 +16,7 @@ BuildRequires:	automake
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
+BuildRequires:	gettext-devel
 BuildRequires:	perl-devel
 BuildRequires:	texinfo >= 4.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
