@@ -1,6 +1,6 @@
 Summary:	Mingw32 GNU Binary Utility Development Utilities - binutils
 Name:		crossmingw32-binutils
-Version:	2.10.91.0.4
+Version:	2.11.90.0.5
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -8,7 +8,7 @@ Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 ExclusiveArch:	%{ix86}
-Source0:	ftp://ftp.gnu.org/pub/gnu/binutils-%{version}.tar.gz
+Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
 Patch0:		binutils-info.patch
 BuildRequires:	flex
 BuildRequires:	bison
@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 # [the same applies to binutils 2.10.1.0.4]
 
 # ldscripts won't be generated properly if SHELL is not bash...
-%{?debug:CFLAGS="-g -O0" LDFLAGS=""}%{!?debug:CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"} \
+CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
 CONFIG_SHELL="/bin/bash" \
 ./configure \
 	--prefix=%{_prefix} \
