@@ -1,6 +1,6 @@
-diff -urN binutils-2.11.90.0.19.org/bfd/doc/bfd.texinfo binutils-2.11.90.0.19/bfd/doc/bfd.texinfo
---- binutils-2.11.90.0.19.org/bfd/doc/bfd.texinfo	Fri Jun 22 13:48:05 2001
-+++ binutils-2.11.90.0.19/bfd/doc/bfd.texinfo	Fri Jun 22 13:48:45 2001
+diff -urN binutils-2.12.90.0.1.org/bfd/doc/bfd.texinfo binutils-2.12.90.0.1/bfd/doc/bfd.texinfo
+--- binutils-2.12.90.0.1.org/bfd/doc/bfd.texinfo	Mon Mar 11 22:37:36 2002
++++ binutils-2.12.90.0.1/bfd/doc/bfd.texinfo	Mon Mar 11 22:37:52 2002
 @@ -21,9 +21,10 @@
  
  @ifinfo
@@ -15,9 +15,9 @@ diff -urN binutils-2.11.90.0.19.org/bfd/doc/bfd.texinfo binutils-2.11.90.0.19/bf
  @end format
  @end ifinfo
  
-diff -urN binutils-2.11.90.0.19.org/binutils/doc/binutils.texi binutils-2.11.90.0.19/binutils/doc/binutils.texi
---- binutils-2.11.90.0.19.org/binutils/doc/binutils.texi	Fri Jun 22 13:48:07 2001
-+++ binutils-2.11.90.0.19/binutils/doc/binutils.texi	Fri Jun 22 14:44:43 2001
+diff -urN binutils-2.12.90.0.1.org/binutils/doc/binutils.texi binutils-2.12.90.0.1/binutils/doc/binutils.texi
+--- binutils-2.12.90.0.1.org/binutils/doc/binutils.texi	Mon Mar 11 22:37:37 2002
++++ binutils-2.12.90.0.1/binutils/doc/binutils.texi	Mon Mar 11 22:37:52 2002
 @@ -6,24 +6,26 @@
  
  @ifinfo
@@ -63,9 +63,9 @@ diff -urN binutils-2.11.90.0.19.org/binutils/doc/binutils.texi binutils-2.11.90.
  @end format
  @end ifinfo
  
-diff -urN binutils-2.11.90.0.19.org/etc/configure.texi binutils-2.11.90.0.19/etc/configure.texi
---- binutils-2.11.90.0.19.org/etc/configure.texi	Fri Jun 22 13:48:06 2001
-+++ binutils-2.11.90.0.19/etc/configure.texi	Fri Jun 22 13:48:45 2001
+diff -urN binutils-2.12.90.0.1.org/etc/configure.texi binutils-2.12.90.0.1/etc/configure.texi
+--- binutils-2.12.90.0.1.org/etc/configure.texi	Mon Mar 11 22:37:37 2002
++++ binutils-2.12.90.0.1/etc/configure.texi	Mon Mar 11 22:37:52 2002
 @@ -5,9 +5,9 @@
  @setchapternewpage off
  @c %**end of header
@@ -78,9 +78,9 @@ diff -urN binutils-2.11.90.0.19.org/etc/configure.texi binutils-2.11.90.0.19/etc
  @end direntry
  
  @ifinfo
-diff -urN binutils-2.11.90.0.19.org/etc/standards.texi binutils-2.11.90.0.19/etc/standards.texi
---- binutils-2.11.90.0.19.org/etc/standards.texi	Fri Jun 22 13:48:06 2001
-+++ binutils-2.11.90.0.19/etc/standards.texi	Fri Jun 22 13:48:45 2001
+diff -urN binutils-2.12.90.0.1.org/etc/standards.texi binutils-2.12.90.0.1/etc/standards.texi
+--- binutils-2.12.90.0.1.org/etc/standards.texi	Mon Mar 11 22:37:37 2002
++++ binutils-2.12.90.0.1/etc/standards.texi	Mon Mar 11 22:37:52 2002
 @@ -8,9 +8,10 @@
  
  @ifinfo
@@ -95,26 +95,28 @@ diff -urN binutils-2.11.90.0.19.org/etc/standards.texi binutils-2.11.90.0.19/etc
  @end format
  @end ifinfo
  
-diff -urN binutils-2.11.90.0.19.org/gas/doc/as.texinfo binutils-2.11.90.0.19/gas/doc/as.texinfo
---- binutils-2.11.90.0.19.org/gas/doc/as.texinfo	Fri Jun 22 13:48:08 2001
-+++ binutils-2.11.90.0.19/gas/doc/as.texinfo	Fri Jun 22 13:48:46 2001
-@@ -108,9 +108,10 @@
+diff -urN binutils-2.12.90.0.1.org/gas/doc/as.texinfo binutils-2.12.90.0.1/gas/doc/as.texinfo
+--- binutils-2.12.90.0.1.org/gas/doc/as.texinfo	Mon Mar 11 22:37:38 2002
++++ binutils-2.12.90.0.1/gas/doc/as.texinfo	Mon Mar 11 22:40:25 2002
+@@ -117,10 +117,11 @@
  
  @ifinfo
  @format
 -START-INFO-DIR-ENTRY
 -* As: (as).                     The GNU assembler.
+-* Gas: (as).                    The GNU assembler.
 -END-INFO-DIR-ENTRY
 +@dircategory Programming tools:
 +@direntry
 +* As: (as).				The GNU assembler
++* Gas: (as).				The GNU assembler
 +@end direntry
  @end format
  @end ifinfo
  
-diff -urN binutils-2.11.90.0.19.org/gas/doc/gasp.texi binutils-2.11.90.0.19/gas/doc/gasp.texi
---- binutils-2.11.90.0.19.org/gas/doc/gasp.texi	Fri Jun 22 13:48:08 2001
-+++ binutils-2.11.90.0.19/gas/doc/gasp.texi	Fri Jun 22 13:48:46 2001
+diff -urN binutils-2.12.90.0.1.org/gas/doc/gasp.texi binutils-2.12.90.0.1/gas/doc/gasp.texi
+--- binutils-2.12.90.0.1.org/gas/doc/gasp.texi	Mon Mar 11 22:37:38 2002
++++ binutils-2.12.90.0.1/gas/doc/gasp.texi	Mon Mar 11 22:37:52 2002
 @@ -14,9 +14,10 @@
  
  @ifinfo
@@ -129,9 +131,9 @@ diff -urN binutils-2.11.90.0.19.org/gas/doc/gasp.texi binutils-2.11.90.0.19/gas/
  @end format
  @end ifinfo
  
-diff -urN binutils-2.11.90.0.19.org/gprof/gprof.texi binutils-2.11.90.0.19/gprof/gprof.texi
---- binutils-2.11.90.0.19.org/gprof/gprof.texi	Fri Jun 22 13:48:22 2001
-+++ binutils-2.11.90.0.19/gprof/gprof.texi	Fri Jun 22 13:48:46 2001
+diff -urN binutils-2.12.90.0.1.org/gprof/gprof.texi binutils-2.12.90.0.1/gprof/gprof.texi
+--- binutils-2.12.90.0.1.org/gprof/gprof.texi	Mon Mar 11 22:37:40 2002
++++ binutils-2.12.90.0.1/gprof/gprof.texi	Mon Mar 11 22:37:52 2002
 @@ -9,9 +9,10 @@
  @c This is a dir.info fragment to support semi-automated addition of
  @c manuals to an info tree.  zoo@cygnus.com is developing this facility.
@@ -146,10 +148,10 @@ diff -urN binutils-2.11.90.0.19.org/gprof/gprof.texi binutils-2.11.90.0.19/gprof
  @end format
  @end ifinfo
  
-diff -urN binutils-2.11.90.0.19.org/ld/ld.texinfo binutils-2.11.90.0.19/ld/ld.texinfo
---- binutils-2.11.90.0.19.org/ld/ld.texinfo	Fri Jun 22 13:48:24 2001
-+++ binutils-2.11.90.0.19/ld/ld.texinfo	Fri Jun 22 13:48:46 2001
-@@ -43,9 +43,10 @@
+diff -urN binutils-2.12.90.0.1.org/ld/ld.texinfo binutils-2.12.90.0.1/ld/ld.texinfo
+--- binutils-2.12.90.0.1.org/ld/ld.texinfo	Mon Mar 11 22:37:41 2002
++++ binutils-2.12.90.0.1/ld/ld.texinfo	Mon Mar 11 22:37:52 2002
+@@ -48,9 +48,10 @@
  
  @ifinfo
  @format
@@ -163,7 +165,7 @@ diff -urN binutils-2.11.90.0.19.org/ld/ld.texinfo binutils-2.11.90.0.19/ld/ld.te
  @end format
  @end ifinfo
  
-@@ -4283,7 +4284,7 @@
+@@ -4590,7 +4591,7 @@
  @node BFD outline
  @section How it works: an outline of BFD
  @cindex opening object files
