@@ -6,11 +6,13 @@ Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - Mingw32 bi
 Summary(tr):	GNU geliþtirme araçlarý - Mingw32 binutils
 Name:		crossmingw32-binutils
 Version:	2.14.90.0.8
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
 # Source0-md5:	3e28792a585e14b57838cd24130a24dd
+Patch0:		binutils-pe-types.patch
+URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
 BuildRequires:	bison
@@ -42,6 +44,7 @@ Ten pakiet zawiera binutils generuj±ce skro¶nie binaria dla Win32.
 
 %prep
 %setup -q -n binutils-%{version}
+%patch0 -p1
 
 %build
 rm -rf $RPM_BUILD_ROOT
@@ -83,6 +86,9 @@ rm -f $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
 # libiberty.a is ELF not PE
 rm -f $RPM_BUILD_ROOT%{arch}/lib/libiberty.a
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
 %dir %{arch}
@@ -92,6 +98,3 @@ rm -f $RPM_BUILD_ROOT%{arch}/lib/libiberty.a
 %{arch}/lib/ldscripts
 %attr(755,root,root) %{_bindir}/%{target}-*
 %{_mandir}/man1/%{target}-*
-
-%clean
-rm -rf $RPM_BUILD_ROOT
