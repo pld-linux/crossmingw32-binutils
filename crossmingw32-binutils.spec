@@ -1,6 +1,6 @@
 Summary:	Mingw32 GNU Binary Utility Development Utilities - binutils
 Name:		crossmingw32-binutils
-Version:	2.10.0.33
+Version:	2.10.1.0.4
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -29,20 +29,16 @@ with supporting Win32 libraries in 'coff' format from free sources.
 This package contains cross targeted binutils.
 
 %prep
-
-%setup -q -T -c -a0
-(cd binutils-%{version}
+%setup -q -n binutils-%{version}
 %patch -p1
-)
 
 %build
-
 rm -rf $RPM_BUILD_ROOT
 
 # Because of a bug in binutils-2.9.1, a cross libbfd.so* is not named
 # lib<target>bfd.so*. To prevent confusion with native binutils, we
 # forget about shared libraries right now, and do not install libbfd.a
-(cd binutils-%{version}
+# [the same applies to binutils 2.10.1.0.4]
 
 # ldscripts won't be generated properly if SHELL is not bash...
 %{?debug:CFLAGS="-g -O" LDFLAGS=""}%{!?debug:CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"} \
@@ -55,12 +51,9 @@ CONFIG_SHELL="/bin/bash" \
 	--target=%{target}
 
 %{__make} tooldir=%{_prefix} EXEEXT="" all
-)
 
 %install
-
 rm -rf $RPM_BUILD_ROOT
-(cd binutils-%{version}
 
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
@@ -68,15 +61,12 @@ rm -rf $RPM_BUILD_ROOT
 	infodir=$RPM_BUILD_ROOT%{_infodir} \
 	libdir=$RPM_BUILD_ROOT%{_libdir}
 
-)
-
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{arch}/bin/*
-%{arch}/lib
+%{arch}/lib/*
 %attr(755,root,root) %{_bindir}/%{target}-*
 %{_mandir}/man1/%{target}-*
 
 %clean
-
 rm -rf $RPM_BUILD_ROOT
