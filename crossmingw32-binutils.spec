@@ -1,5 +1,9 @@
-Summary:	Mingw32 Binary Utility Development Utilities - GNU binutils
-Summary(pl):	Zestaw narzêdzi mingw32 - GNU binutils
+Summary:	Cross Mingw32 GNU binary utility development utilities - binutils
+Summary(es):	Utilitarios para desarrollo de binarios de la GNU - Mingw32 binutils
+Summary(fr):	Utilitaires de développement binaire de GNU - Mingw32 binutils
+Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla Mingw32 - binutils
+Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
+Summary(tr):	GNU geliþtirme araçlarý - Mingw32 binutils
 Name:		crossmingw32-binutils
 Version:	2.14.90.0.6
 Release:	1
@@ -33,7 +37,7 @@ System sk³ada siê z binutils, gcc z g++ i objc, libstdc++ - wszystkie
 generuj±ce kod dla platformy i386-mingw32, oraz z bibliotek w formacie
 COFF.
 
-Ten pakiet zawiera binutils generuj±ce binaria Win32.
+Ten pakiet zawiera binutils generuj±ce skro¶nie binaria dla Win32.
 
 %prep
 %setup -q -n binutils-%{version}
