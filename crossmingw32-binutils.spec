@@ -5,12 +5,12 @@ Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla Mingw32 - binutils
 Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
 Summary(tr):	GNU geliþtirme araçlarý - Mingw32 binutils
 Name:		crossmingw32-binutils
-Version:	2.14.90.0.8
-Release:	2
+Version:	2.15.90.0.1
+Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	3e28792a585e14b57838cd24130a24dd
+# Source0-md5:	4558a086c778915da83bc58ad540f4c0
 Patch0:		binutils-pe-types.patch
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
