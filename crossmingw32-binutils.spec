@@ -4,6 +4,8 @@ Version:	2.10.0.33
 Release:	1
 License:	GPL
 Group:		Development/Tools
+Group(de):	Entwicklung/Werkzeuge
+Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 ExclusiveArch:	%{ix86}
 Source0:	ftp://ftp.gnu.org/pub/gnu/binutils-%{version}.tar.gz
