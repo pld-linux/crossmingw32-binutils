@@ -1,4 +1,5 @@
-Summary:	Mingw32 GNU Binary Utility Development Utilities - binutils
+Summary:	Mingw32 Binary Utility Development Utilities - GNU binutils
+Summary(pl):	Zestaw narzêdzi mingw32 - GNU binutils
 Name:		crossmingw32-binutils
 Version:	2.11.90.0.8
 Release:	1
@@ -27,6 +28,15 @@ and objc, and libstdc++, all cross targeted to i386-mingw32, along
 with supporting Win32 libraries in 'coff' format from free sources.
 
 This package contains cross targeted binutils.
+
+%description -l pl
+crossmingw32 jest kompletnym systemem do kroskompilacji, pozwalaj±cym
+budowaæ aplikacje MS Windows pod Linuksem u¿ywaj±c bibliotek mingw32.
+System sk³ada siê z binutils, gcc z g++ i objc, libstdc++ - wszystkie
+generuj±ce kod dla platformy i386-mingw32, oraz z bibliotek w formacie
+COFF.
+
+Ten pakiet zawiera binutils generuj±ce binaria Win32.
 
 %prep
 %setup -q -n binutils-%{version}
