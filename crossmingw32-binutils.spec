@@ -7,6 +7,7 @@ License:	GPL
 Group:		Development/Tools
 ExclusiveArch:	%{ix86}
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
+# Source0-md5: 62b779abb60cc8ce08687fb218b829be
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
