@@ -114,9 +114,9 @@ diff -urN binutils-2.12.90.0.1.org/gas/doc/as.texinfo binutils-2.12.90.0.1/gas/d
  @end format
  @end ifinfo
  
-diff -urN binutils-2.12.90.0.1.org/gas/doc/gasp.texi binutils-2.12.90.0.1/gas/doc/gasp.texi
---- binutils-2.12.90.0.1.org/gas/doc/gasp.texi	Mon Mar 11 22:37:38 2002
-+++ binutils-2.12.90.0.1/gas/doc/gasp.texi	Mon Mar 11 22:37:52 2002
+diff -urN binutils-2.14.90.0.7.org/gas/doc/gasp.texinfo binutils-2.14.90.0.7/gas/doc/gasp.texinfo
+--- binutils-2.14.90.0.7.org/gas/doc/gasp.texinfo	Mon Mar 11 22:37:38 2002
++++ binutils-2.14.90.0.7/gas/doc/gasp.texinfo	Mon Mar 11 22:37:52 2002
 @@ -14,9 +14,10 @@
  
  @ifinfo
@@ -174,3 +174,14 @@ diff -urN binutils-2.12.90.0.1.org/ld/ld.texinfo binutils-2.12.90.0.1/ld/ld.texi
  @end ifclear
  
  @node Reporting Bugs
+--- binutils-2.14.90.0.7/gas/doc/Makefile.in.orig	2003-11-04 00:30:12.000000000 +0100
++++ binutils-2.14.90.0.7/gas/doc/Makefile.in	2003-11-04 00:50:40.797920448 +0100
+@@ -439,7 +439,7 @@
+ 
+ install-exec-am:
+ 
+-install-info:
++install-info: install-info-am
+ 
+ install-info-am: $(INFO_DEPS)
+ 	@$(NORMAL_INSTALL)
