@@ -1,6 +1,5 @@
-diff -Nru binutils-2.9.1.0.23/bfd/doc/bfd.texinfo binutils-2.9.1.0.23.new/bfd/doc/bfd.texinfo
---- binutils-2.9.1.0.23/bfd/doc/bfd.texinfo	Thu Jul 24 20:38:45 1997
-+++ binutils-2.9.1.0.23.new/bfd/doc/bfd.texinfo	Wed Apr  7 22:57:53 1999
+--- binutils-2.9.5.0.12/bfd/doc/bfd.texinfo	Thu Jun  3 20:01:55 1999
++++ binutils-2.9.5.0.12.new/bfd/doc/bfd.texinfo	Fri Sep 17 16:49:36 1999
 @@ -19,9 +19,10 @@
  
  @ifinfo
@@ -10,66 +9,74 @@ diff -Nru binutils-2.9.1.0.23/bfd/doc/bfd.texinfo binutils-2.9.1.0.23.new/bfd/do
 -END-INFO-DIR-ENTRY
 +@dircategory Programming tools:
 +@direntry
-+* Bfd: (bfd)				The Binary File Descriptor library
++* Bfd: (bfd).				The Binary File Descriptor library
 +@end direntry
  @end format
  @end ifinfo
  
-diff -Nru binutils-2.9.1.0.23/bfd/hash.c binutils-2.9.1.0.23.new/bfd/hash.c
---- binutils-2.9.1.0.23/bfd/hash.c	Wed Mar 26 03:05:38 1997
-+++ binutils-2.9.1.0.23.new/bfd/hash.c	Thu Apr  8 00:46:11 1999
-@@ -73,7 +73,7 @@
- 	The function <<bfd_hash_table_init>> take as an argument a
- 	function to use to create new entries.  For a basic hash
- 	table, use the function <<bfd_hash_newfunc>>.  @xref{Deriving
--	a New Hash Table Type} for why you would want to use a
-+	a New Hash Table Type}, for why you would want to use a
- 	different value for this argument.
- 
- @findex bfd_hash_allocate
-diff -Nru binutils-2.9.1.0.23/bfd/linker.c binutils-2.9.1.0.23.new/bfd/linker.c
---- binutils-2.9.1.0.23/bfd/linker.c	Thu Jan 15 18:37:32 1998
-+++ binutils-2.9.1.0.23.new/bfd/linker.c	Thu Apr  8 00:46:36 1999
-@@ -74,7 +74,7 @@
- @cindex target vector (_bfd_link_hash_table_create)
- 	The linker routines must create a hash table, which must be
- 	derived from <<struct bfd_link_hash_table>> described in
--	<<bfdlink.c>>.  @xref{Hash Tables} for information on how to
-+	<<bfdlink.c>>.  @xref{Hash Tables}, for information on how to
- 	create a derived hash table.  This entry point is called using
- 	the target vector of the linker output file.
- 
-diff -Nru binutils-2.9.1.0.23/binutils/binutils.texi binutils-2.9.1.0.23.new/binutils/binutils.texi
---- binutils-2.9.1.0.23/binutils/binutils.texi	Sat Apr  4 18:57:23 1998
-+++ binutils-2.9.1.0.23.new/binutils/binutils.texi	Thu Apr  8 01:26:28 1999
-@@ -4,11 +4,19 @@
+--- binutils-2.9.5.0.12/binutils/binutils.texi	Fri Sep 10 01:11:03 1999
++++ binutils-2.9.5.0.12.new/binutils/binutils.texi	Fri Sep 17 16:57:19 1999
+@@ -4,24 +4,26 @@
  
  @ifinfo
  @format
 -START-INFO-DIR-ENTRY
--* Binutils: (binutils).         The GNU binary utilities "ar", "objcopy",
--				"objdump", "nm", "nlmconv", "size", 
--                                "strings", "strip", and "ranlib".
+-* Binutils: (binutils).         The GNU binary utilities.
+-* ar: (binutils)ar.               Create, modify, and extract from archives
+-* nm: (binutils)nm.               List symbols from object files
+-* objcopy: (binutils)objcopy.	  Copy and translate object files
+-* objdump: (binutils)objdump.     Display information from object files
+-* ranlib: (binutils)ranlib.       Generate index to archive contents
+-* readelf: (binutils)readelf.	  Display the contents of ELF format files.
+-* size: (binutils)size.           List section sizes and total size
+-* strings: (binutils)strings.     List printable strings from files
+-* strip: (binutils)strip.         Discard symbols
+-* c++filt: (binutils)c++filt.	  Filter to demangle encoded C++ symbols
+-* cxxfilt: (binutils)c++filt.     MS-DOS name for c++filt
+-* addr2line: (binutils)addr2line. Convert addresses to file and line
+-* nlmconv: (binutils)nlmconv.     Converts object code into an NLM
+-* windres: (binutils)windres.	  Manipulate Windows resources
+-* dlltool: (binutils)dlltool.	  Create files needed to build and use DLLs
 -END-INFO-DIR-ENTRY
 +@dircategory Programming tools:
 +@direntry
-+* Binutils: (binutils)			The GNU binary utilities
-+* ar: (binutils)ar			Create, modify, and extract from archives
-+* nm: (binutils)nm			List symbols from object files
-+* objcopy: (binutils)objcopy		Copy and translate object files
-+* objdump: (binutils)objdump		Display information from object files
-+* ranlib: (binutils)ranlib		Generate index to archive contents
-+* size: (binutils)size			List section sizes and total size
-+* strings: (binutils)strings		List printable strings from files
-+* strip: (binutils)strip		Discard symbols
-+* nlmconv: (binutils)nlmconv		Converts object code into an NLM
++* Binutils: (binutils).			The GNU binary utilities
++* ar: (binutils)ar.			Create, modify and extract from archives
++* nm: (binutils)nm.			List symbols from object files
++* objcopy: (binutils)objcopy.		Copy and translate object files
++* objdump: (binutils)objdump.		Display information from object files
++* ranlib: (binutils)ranlib.		Generate index to archive contents
++* readelf: (binutils)readelf.		Display the contents of ELF format files
++* size: (binutils)size.			List section sizes and total size
++* strings: (binutils)strings.		List printable strings from files
++* strip: (binutils)strip.		Discard symbols
++* c++filt: (binutils)c++filt.		Filter to demangle encoded C++ symbols
++* cxxfilt: (binutils)c++filt.		MS-DOS name for c++filt
++* addr2line: (binutils)addr2line.	Convert addresses to file and line
++* nlmconv: (binutils)nlmconv.		Converts object code into an NLM
++* windres: (binutils)windres.		Manipulate Windows resources
++* dlltool: (binutils)dlltool.		Create files needed to 
++					build and use DLLs
 +@end direntry
  @end format
  @end ifinfo
  
-diff -Nru binutils-2.9.1.0.23/etc/standards.texi binutils-2.9.1.0.23.new/etc/standards.texi
---- binutils-2.9.1.0.23/etc/standards.texi	Sat Apr  4 18:57:59 1998
-+++ binutils-2.9.1.0.23.new/etc/standards.texi	Wed Apr  7 22:59:33 1999
+--- binutils-2.9.5.0.12/etc/configure.texi	Thu Jun  3 20:01:55 1999
++++ binutils-2.9.5.0.12.new/etc/configure.texi	Fri Sep 17 17:01:25 1999
+@@ -5,9 +5,9 @@
+ @setchapternewpage off
+ @c %**end of header
+ 
+-@dircategory GNU admin
++@dircategory Programming tools:
+ @direntry
+-* configure: (configure).	The GNU configure and build system
++* configure: (configure).		The GNU configure and build system
+ @end direntry
+ 
+ @ifinfo
+--- binutils-2.9.5.0.12/etc/standards.texi	Thu Jun  3 20:01:55 1999
++++ binutils-2.9.5.0.12.new/etc/standards.texi	Fri Sep 17 17:02:08 1999
 @@ -8,9 +8,10 @@
  
  @ifinfo
@@ -79,15 +86,14 @@ diff -Nru binutils-2.9.1.0.23/etc/standards.texi binutils-2.9.1.0.23.new/etc/sta
 -END-INFO-DIR-ENTRY
 +@dircategory Miscellaneous:
 +@direntry
-+* Standards: (standards)		GNU coding standards
++* Standards: (standards).		GNU coding standards
 +@end direntry
  @end format
  @end ifinfo
  
-diff -Nru binutils-2.9.1.0.23/gas/doc/as.texinfo binutils-2.9.1.0.23.new/gas/doc/as.texinfo
---- binutils-2.9.1.0.23/gas/doc/as.texinfo	Wed Mar 31 19:34:16 1999
-+++ binutils-2.9.1.0.23.new/gas/doc/as.texinfo	Wed Apr  7 23:01:41 1999
-@@ -74,9 +74,10 @@
+--- binutils-2.9.5.0.12/gas/doc/as.texinfo	Mon Sep  6 19:57:22 1999
++++ binutils-2.9.5.0.12.new/gas/doc/as.texinfo	Fri Sep 17 17:03:05 1999
+@@ -75,9 +75,10 @@
  
  @ifinfo
  @format
@@ -96,71 +102,13 @@ diff -Nru binutils-2.9.1.0.23/gas/doc/as.texinfo binutils-2.9.1.0.23.new/gas/doc
 -END-INFO-DIR-ENTRY
 +@dircategory Programming tools:
 +@direntry
-+* As: (as)				The GNU assembler
++* As: (as).				The GNU assembler
 +@end direntry
  @end format
  @end ifinfo
  
-diff -Nru binutils-2.9.1.0.23/gprof/gprof.texi binutils-2.9.1.0.23.new/gprof/gprof.texi
---- binutils-2.9.1.0.23/gprof/gprof.texi	Wed Mar 25 17:01:36 1998
-+++ binutils-2.9.1.0.23.new/gprof/gprof.texi	Wed Apr  7 23:02:51 1999
-@@ -7,9 +7,10 @@
- @c This is a dir.info fragment to support semi-automated addition of
- @c manuals to an info tree.  zoo@cygnus.com is developing this facility.
- @format
--START-INFO-DIR-ENTRY
--* gprof: (gprof).                Profiling your program's execution
--END-INFO-DIR-ENTRY
-+@dircategory Programming tools:
-+@direntry
-+* gprof: (gprof)			Profiling your program's execution
-+@end direntry
- @end format
- @end ifinfo
- 
-diff -Nru binutils-2.9.1.0.23/ld/ld.texinfo binutils-2.9.1.0.23.new/ld/ld.texinfo
---- binutils-2.9.1.0.23/ld/ld.texinfo	Tue May  5 18:24:20 1998
-+++ binutils-2.9.1.0.23.new/ld/ld.texinfo	Thu Apr  8 01:14:16 1999
-@@ -8,9 +8,10 @@
- 
- @ifinfo
- @format
--START-INFO-DIR-ENTRY
--* Ld: (ld).                       The GNU linker.
--END-INFO-DIR-ENTRY
-+@dircategory Programming tools:
-+@direntry
-+* Ld: (ld)				The GNU linker
-+@end direntry
- @end format
- @end ifinfo
- 
-@@ -1837,11 +1838,11 @@
- @table @code
- @item Assignment
- Semicolons must appear at the end of assignment expressions.
--@xref{Assignment}
-+@xref{Assignment}.
- 
- @item PHDRS
- Semicolons must appear at the end of a @code{PHDRS} statement.
--@xref{PHDRS}
-+@xref{PHDRS}.
- @end table
- 
- @node MEMORY
-@@ -3330,7 +3331,7 @@
- @node BFD outline
- @section How it works: an outline of BFD
- @cindex opening object files
--@include bfdsumm.texi
-+@include ../bfd/doc/bfdsumm.texi
- @end ifclear
- 
- @node Reporting Bugs
-diff -Nru binutils-2.9.1.0.23/gas/doc/gasp.texi binutils-2.9.1.0.23.new/gas/doc/gasp.texi
---- binutils-2.9.1.0.23/gas/doc/gasp.texi	Tue Nov 28 05:20:24 1995
-+++ binutils-2.9.1.0.23.new/gas/doc/gasp.texi	Thu Apr  8 06:59:58 1999
+--- binutils-2.9.5.0.12/gas/doc/gasp.texi	Thu Jun  3 20:02:02 1999
++++ binutils-2.9.5.0.12.new/gas/doc/gasp.texi	Fri Sep 17 17:09:37 1999
 @@ -10,9 +10,10 @@
  
  @ifinfo
@@ -170,8 +118,49 @@ diff -Nru binutils-2.9.1.0.23/gas/doc/gasp.texi binutils-2.9.1.0.23.new/gas/doc/
 -END-INFO-DIR-ENTRY
 +@dircategory Programming tools:
 +@direntry
-+* gasp: (gasp)				The GNU Assembler Preprocessor
++* gasp: (gasp).				The GNU Assembler Preprocessor
 +@end direntry
  @end format
  @end ifinfo
  
+--- binutils-2.9.5.0.12/gprof/gprof.texi	Sun Jun 20 19:04:59 1999
++++ binutils-2.9.5.0.12.new/gprof/gprof.texi	Fri Sep 17 17:04:06 1999
+@@ -7,9 +7,10 @@
+ @c This is a dir.info fragment to support semi-automated addition of
+ @c manuals to an info tree.  zoo@cygnus.com is developing this facility.
+ @format
+-START-INFO-DIR-ENTRY
+-* gprof: (gprof).                Profiling your program's execution
+-END-INFO-DIR-ENTRY
++@dircategory Programming tools:
++@direntry
++* gprof: (gprof).			Profiling your program's execution
++@end direntry
+ @end format
+ @end ifinfo
+ 
+--- binutils-2.9.5.0.12/ld/ld.texinfo	Fri Sep 10 01:11:54 1999
++++ binutils-2.9.5.0.12.new/ld/ld.texinfo	Fri Sep 17 17:08:03 1999
+@@ -9,9 +9,10 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* Ld: (ld).                       The GNU linker.
+-END-INFO-DIR-ENTRY
++@dircategory Programming tools:
++@direntry
++* Ld: (ld).				The GNU linker
++@end direntry
+ @end format
+ @end ifinfo
+ 
+@@ -3993,7 +3994,7 @@
+ @node BFD outline
+ @section How it works: an outline of BFD
+ @cindex opening object files
+-@include bfdsumm.texi
++@include ../bfd/doc/bfdsumm.texi
+ @end ifclear
+ 
+ @node Reporting Bugs
