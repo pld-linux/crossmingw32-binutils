@@ -6,11 +6,12 @@ Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - Mingw32 bi
 Summary(tr):	GNU geliþtirme araçlarý - Mingw32 binutils
 Name:		crossmingw32-binutils
 Version:	2.15.91.0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
 # Source0-md5:	41983069bef07af4f1350c6d30666b2d
+Patch0:		binutils-dll.patch
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
@@ -47,6 +48,7 @@ Ten pakiet zawiera binutils generuj±ce skro¶nie binaria dla Win32.
 
 %prep
 %setup -q -n binutils-%{version}
+%patch0 -p1
 
 %build
 cp /usr/share/automake/config.sub .
