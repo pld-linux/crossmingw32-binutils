@@ -1,6 +1,7 @@
---- binutils-2.9.5.0.12/bfd/doc/bfd.texinfo	Thu Jun  3 20:01:55 1999
-+++ binutils-2.9.5.0.12.new/bfd/doc/bfd.texinfo	Fri Sep 17 16:49:36 1999
-@@ -19,9 +19,10 @@
+diff -urN binutils-2.11.90.0.19.org/bfd/doc/bfd.texinfo binutils-2.11.90.0.19/bfd/doc/bfd.texinfo
+--- binutils-2.11.90.0.19.org/bfd/doc/bfd.texinfo	Fri Jun 22 13:48:05 2001
++++ binutils-2.11.90.0.19/bfd/doc/bfd.texinfo	Fri Jun 22 13:48:45 2001
+@@ -21,9 +21,10 @@
  
  @ifinfo
  @format
@@ -14,9 +15,10 @@
  @end format
  @end ifinfo
  
---- binutils-2.9.5.0.12/binutils/binutils.texi	Fri Sep 10 01:11:03 1999
-+++ binutils-2.9.5.0.12.new/binutils/binutils.texi	Fri Sep 17 16:57:19 1999
-@@ -4,24 +4,26 @@
+diff -urN binutils-2.11.90.0.19.org/binutils/doc/binutils.texi binutils-2.11.90.0.19/binutils/doc/binutils.texi
+--- binutils-2.11.90.0.19.org/binutils/doc/binutils.texi	Fri Jun 22 13:48:07 2001
++++ binutils-2.11.90.0.19/binutils/doc/binutils.texi	Fri Jun 22 14:44:43 2001
+@@ -6,24 +6,26 @@
  
  @ifinfo
  @format
@@ -61,8 +63,9 @@
  @end format
  @end ifinfo
  
---- binutils-2.9.5.0.12/etc/configure.texi	Thu Jun  3 20:01:55 1999
-+++ binutils-2.9.5.0.12.new/etc/configure.texi	Fri Sep 17 17:01:25 1999
+diff -urN binutils-2.11.90.0.19.org/etc/configure.texi binutils-2.11.90.0.19/etc/configure.texi
+--- binutils-2.11.90.0.19.org/etc/configure.texi	Fri Jun 22 13:48:06 2001
++++ binutils-2.11.90.0.19/etc/configure.texi	Fri Jun 22 13:48:45 2001
 @@ -5,9 +5,9 @@
  @setchapternewpage off
  @c %**end of header
@@ -75,8 +78,9 @@
  @end direntry
  
  @ifinfo
---- binutils-2.9.5.0.12/etc/standards.texi	Thu Jun  3 20:01:55 1999
-+++ binutils-2.9.5.0.12.new/etc/standards.texi	Fri Sep 17 17:02:08 1999
+diff -urN binutils-2.11.90.0.19.org/etc/standards.texi binutils-2.11.90.0.19/etc/standards.texi
+--- binutils-2.11.90.0.19.org/etc/standards.texi	Fri Jun 22 13:48:06 2001
++++ binutils-2.11.90.0.19/etc/standards.texi	Fri Jun 22 13:48:45 2001
 @@ -8,9 +8,10 @@
  
  @ifinfo
@@ -91,9 +95,10 @@
  @end format
  @end ifinfo
  
---- binutils-2.9.5.0.12/gas/doc/as.texinfo	Mon Sep  6 19:57:22 1999
-+++ binutils-2.9.5.0.12.new/gas/doc/as.texinfo	Fri Sep 17 17:03:05 1999
-@@ -75,9 +75,10 @@
+diff -urN binutils-2.11.90.0.19.org/gas/doc/as.texinfo binutils-2.11.90.0.19/gas/doc/as.texinfo
+--- binutils-2.11.90.0.19.org/gas/doc/as.texinfo	Fri Jun 22 13:48:08 2001
++++ binutils-2.11.90.0.19/gas/doc/as.texinfo	Fri Jun 22 13:48:46 2001
+@@ -108,9 +108,10 @@
  
  @ifinfo
  @format
@@ -107,9 +112,10 @@
  @end format
  @end ifinfo
  
---- binutils-2.9.5.0.12/gas/doc/gasp.texi	Thu Jun  3 20:02:02 1999
-+++ binutils-2.9.5.0.12.new/gas/doc/gasp.texi	Fri Sep 17 17:09:37 1999
-@@ -10,9 +10,10 @@
+diff -urN binutils-2.11.90.0.19.org/gas/doc/gasp.texi binutils-2.11.90.0.19/gas/doc/gasp.texi
+--- binutils-2.11.90.0.19.org/gas/doc/gasp.texi	Fri Jun 22 13:48:08 2001
++++ binutils-2.11.90.0.19/gas/doc/gasp.texi	Fri Jun 22 13:48:46 2001
+@@ -14,9 +14,10 @@
  
  @ifinfo
  @format
@@ -123,9 +129,10 @@
  @end format
  @end ifinfo
  
---- binutils-2.9.5.0.12/gprof/gprof.texi	Sun Jun 20 19:04:59 1999
-+++ binutils-2.9.5.0.12.new/gprof/gprof.texi	Fri Sep 17 17:04:06 1999
-@@ -7,9 +7,10 @@
+diff -urN binutils-2.11.90.0.19.org/gprof/gprof.texi binutils-2.11.90.0.19/gprof/gprof.texi
+--- binutils-2.11.90.0.19.org/gprof/gprof.texi	Fri Jun 22 13:48:22 2001
++++ binutils-2.11.90.0.19/gprof/gprof.texi	Fri Jun 22 13:48:46 2001
+@@ -9,9 +9,10 @@
  @c This is a dir.info fragment to support semi-automated addition of
  @c manuals to an info tree.  zoo@cygnus.com is developing this facility.
  @format
@@ -139,9 +146,10 @@
  @end format
  @end ifinfo
  
---- binutils-2.9.5.0.12/ld/ld.texinfo	Fri Sep 10 01:11:54 1999
-+++ binutils-2.9.5.0.12.new/ld/ld.texinfo	Fri Sep 17 17:08:03 1999
-@@ -9,9 +9,10 @@
+diff -urN binutils-2.11.90.0.19.org/ld/ld.texinfo binutils-2.11.90.0.19/ld/ld.texinfo
+--- binutils-2.11.90.0.19.org/ld/ld.texinfo	Fri Jun 22 13:48:24 2001
++++ binutils-2.11.90.0.19/ld/ld.texinfo	Fri Jun 22 13:48:46 2001
+@@ -43,9 +43,10 @@
  
  @ifinfo
  @format
@@ -155,7 +163,7 @@
  @end format
  @end ifinfo
  
-@@ -3993,7 +3994,7 @@
+@@ -4283,7 +4284,7 @@
  @node BFD outline
  @section How it works: an outline of BFD
  @cindex opening object files
