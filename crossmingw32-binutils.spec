@@ -1,17 +1,16 @@
 Summary:	Mingw32 Binary Utility Development Utilities - GNU binutils
 Summary(pl):	Zestaw narzêdzi mingw32 - GNU binutils
 Name:		crossmingw32-binutils
-Version:	2.11.92.0.10
-Release:	2
+Version:	2.12.90.0.15
+Release:	1
 License:	GPL
 Group:		Development/Tools
 ExclusiveArch:	%{ix86}
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-Patch0:		binutils-info.patch
-BuildRequires:	flex
-BuildRequires:	bison
-BuildRequires:	perl-devel
 BuildRequires:	bash
+BuildRequires:	bison
+BuildRequires:	flex
+BuildRequires:	perl-devel
 Requires:	crossmingw32-platform
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,7 +37,6 @@ Ten pakiet zawiera binutils generuj±ce binaria Win32.
 
 %prep
 %setup -q -n binutils-%{version}
-%patch -p1
 
 %build
 rm -rf $RPM_BUILD_ROOT
