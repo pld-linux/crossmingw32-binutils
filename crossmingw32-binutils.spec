@@ -1,6 +1,6 @@
 Summary:	Mingw32 GNU Binary Utility Development Utilities - binutils
 Name:		crossmingw32-binutils
-Version:	2.11.90.0.5
+Version:	2.11.90.0.7
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -16,8 +16,8 @@ BuildRequires:	/bin/bash
 Requires:	crossmingw32-platform
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define target i386-mingw32
-%define arch %{_prefix}/%{target}
+%define		target		i386-mingw32
+%define		arch		%{_prefix}/%{target}
 
 %description
 crossmingw32 is a complete cross-compiling development system for
