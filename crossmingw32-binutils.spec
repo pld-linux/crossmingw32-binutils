@@ -82,7 +82,8 @@ rm -rf $RPM_BUILD_ROOT
 	INSTALL='$$s/install-sh -c' \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
-	infodir=$RPM_BUILD_ROOT%{_infodir}
+	infodir=$RPM_BUILD_ROOT%{_infodir} \
+	libdir=$RPM_BUILD_ROOT%{_libdir}
 
 # remove this man page unless we cross-build for netware platform.
 # however, this should be done in Makefiles.
