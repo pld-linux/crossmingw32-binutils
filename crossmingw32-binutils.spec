@@ -6,7 +6,7 @@ Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - Mingw32 bi
 Summary(tr):	GNU geliþtirme araçlarý - Mingw32 binutils
 Name:		crossmingw32-binutils
 Version:	2.14.90.0.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
