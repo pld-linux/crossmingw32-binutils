@@ -158,3 +158,20 @@ diff -Nru binutils-2.9.1.0.23/ld/ld.texinfo binutils-2.9.1.0.23.new/ld/ld.texinf
  @end ifclear
  
  @node Reporting Bugs
+diff -Nru binutils-2.9.1.0.23/gas/doc/gasp.texi binutils-2.9.1.0.23.new/gas/doc/gasp.texi
+--- binutils-2.9.1.0.23/gas/doc/gasp.texi	Tue Nov 28 05:20:24 1995
++++ binutils-2.9.1.0.23.new/gas/doc/gasp.texi	Thu Apr  8 06:59:58 1999
+@@ -10,9 +10,10 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* gasp: (gasp).                     The GNU Assembler Preprocessor
+-END-INFO-DIR-ENTRY
++@dircategory Programming tools:
++@direntry
++* gasp: (gasp)				The GNU Assembler Preprocessor
++@end direntry
+ @end format
+ @end ifinfo
+ 
