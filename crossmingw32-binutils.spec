@@ -11,6 +11,7 @@ License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
 # Source0-md5:	b5b1608f7308c487c0f3af8e4592a71a
+BuildRequires:	automake
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
@@ -44,6 +45,7 @@ Ten pakiet zawiera binutils generuj±ce skro¶nie binaria dla Win32.
 
 %build
 rm -rf $RPM_BUILD_ROOT
+cp /usr/share/automake/config.sub .
 
 # Because of a bug in binutils-2.9.1, a cross libbfd.so* is not named
 # lib<target>bfd.so*. To prevent confusion with native binutils, we
