@@ -5,7 +5,6 @@ Version:	2.14.90.0.4.1
 Release:	2
 License:	GPL
 Group:		Development/Tools
-ExclusiveArch:	%{ix86}
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
 # Source0-md5:	e4907bd263ef912096ec8c0f64033a9b
 BuildRequires:	bash
