@@ -1,0 +1,160 @@
+diff -Nru binutils-2.9.1.0.23/bfd/doc/bfd.texinfo binutils-2.9.1.0.23.new/bfd/doc/bfd.texinfo
+--- binutils-2.9.1.0.23/bfd/doc/bfd.texinfo	Thu Jul 24 20:38:45 1997
++++ binutils-2.9.1.0.23.new/bfd/doc/bfd.texinfo	Wed Apr  7 22:57:53 1999
+@@ -19,9 +19,10 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* Bfd: (bfd).                   The Binary File Descriptor library.
+-END-INFO-DIR-ENTRY
++@dircategory Programming tools:
++@direntry
++* Bfd: (bfd)				The Binary File Descriptor library
++@end direntry
+ @end format
+ @end ifinfo
+ 
+diff -Nru binutils-2.9.1.0.23/bfd/hash.c binutils-2.9.1.0.23.new/bfd/hash.c
+--- binutils-2.9.1.0.23/bfd/hash.c	Wed Mar 26 03:05:38 1997
++++ binutils-2.9.1.0.23.new/bfd/hash.c	Thu Apr  8 00:46:11 1999
+@@ -73,7 +73,7 @@
+ 	The function <<bfd_hash_table_init>> take as an argument a
+ 	function to use to create new entries.  For a basic hash
+ 	table, use the function <<bfd_hash_newfunc>>.  @xref{Deriving
+-	a New Hash Table Type} for why you would want to use a
++	a New Hash Table Type}, for why you would want to use a
+ 	different value for this argument.
+ 
+ @findex bfd_hash_allocate
+diff -Nru binutils-2.9.1.0.23/bfd/linker.c binutils-2.9.1.0.23.new/bfd/linker.c
+--- binutils-2.9.1.0.23/bfd/linker.c	Thu Jan 15 18:37:32 1998
++++ binutils-2.9.1.0.23.new/bfd/linker.c	Thu Apr  8 00:46:36 1999
+@@ -74,7 +74,7 @@
+ @cindex target vector (_bfd_link_hash_table_create)
+ 	The linker routines must create a hash table, which must be
+ 	derived from <<struct bfd_link_hash_table>> described in
+-	<<bfdlink.c>>.  @xref{Hash Tables} for information on how to
++	<<bfdlink.c>>.  @xref{Hash Tables}, for information on how to
+ 	create a derived hash table.  This entry point is called using
+ 	the target vector of the linker output file.
+ 
+diff -Nru binutils-2.9.1.0.23/binutils/binutils.texi binutils-2.9.1.0.23.new/binutils/binutils.texi
+--- binutils-2.9.1.0.23/binutils/binutils.texi	Sat Apr  4 18:57:23 1998
++++ binutils-2.9.1.0.23.new/binutils/binutils.texi	Thu Apr  8 01:26:28 1999
+@@ -4,11 +4,19 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* Binutils: (binutils).         The GNU binary utilities "ar", "objcopy",
+-				"objdump", "nm", "nlmconv", "size", 
+-                                "strings", "strip", and "ranlib".
+-END-INFO-DIR-ENTRY
++@dircategory Programming tools:
++@direntry
++* Binutils: (binutils)			The GNU binary utilities
++* ar: (binutils)ar			Create, modify, and extract from archives
++* nm: (binutils)nm			List symbols from object files
++* objcopy: (binutils)objcopy		Copy and translate object files
++* objdump: (binutils)objdump		Display information from object files
++* ranlib: (binutils)ranlib		Generate index to archive contents
++* size: (binutils)size			List section sizes and total size
++* strings: (binutils)strings		List printable strings from files
++* strip: (binutils)strip		Discard symbols
++* nlmconv: (binutils)nlmconv		Converts object code into an NLM
++@end direntry
+ @end format
+ @end ifinfo
+ 
+diff -Nru binutils-2.9.1.0.23/etc/standards.texi binutils-2.9.1.0.23.new/etc/standards.texi
+--- binutils-2.9.1.0.23/etc/standards.texi	Sat Apr  4 18:57:59 1998
++++ binutils-2.9.1.0.23.new/etc/standards.texi	Wed Apr  7 22:59:33 1999
+@@ -8,9 +8,10 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* Standards: (standards).        GNU coding standards.
+-END-INFO-DIR-ENTRY
++@dircategory Miscellaneous:
++@direntry
++* Standards: (standards)		GNU coding standards
++@end direntry
+ @end format
+ @end ifinfo
+ 
+diff -Nru binutils-2.9.1.0.23/gas/doc/as.texinfo binutils-2.9.1.0.23.new/gas/doc/as.texinfo
+--- binutils-2.9.1.0.23/gas/doc/as.texinfo	Wed Mar 31 19:34:16 1999
++++ binutils-2.9.1.0.23.new/gas/doc/as.texinfo	Wed Apr  7 23:01:41 1999
+@@ -74,9 +74,10 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* As: (as).                     The GNU assembler.
+-END-INFO-DIR-ENTRY
++@dircategory Programming tools:
++@direntry
++* As: (as)				The GNU assembler
++@end direntry
+ @end format
+ @end ifinfo
+ 
+diff -Nru binutils-2.9.1.0.23/gprof/gprof.texi binutils-2.9.1.0.23.new/gprof/gprof.texi
+--- binutils-2.9.1.0.23/gprof/gprof.texi	Wed Mar 25 17:01:36 1998
++++ binutils-2.9.1.0.23.new/gprof/gprof.texi	Wed Apr  7 23:02:51 1999
+@@ -7,9 +7,10 @@
+ @c This is a dir.info fragment to support semi-automated addition of
+ @c manuals to an info tree.  zoo@cygnus.com is developing this facility.
+ @format
+-START-INFO-DIR-ENTRY
+-* gprof: (gprof).                Profiling your program's execution
+-END-INFO-DIR-ENTRY
++@dircategory Programming tools:
++@direntry
++* gprof: (gprof)			Profiling your program's execution
++@end direntry
+ @end format
+ @end ifinfo
+ 
+diff -Nru binutils-2.9.1.0.23/ld/ld.texinfo binutils-2.9.1.0.23.new/ld/ld.texinfo
+--- binutils-2.9.1.0.23/ld/ld.texinfo	Tue May  5 18:24:20 1998
++++ binutils-2.9.1.0.23.new/ld/ld.texinfo	Thu Apr  8 01:14:16 1999
+@@ -8,9 +8,10 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* Ld: (ld).                       The GNU linker.
+-END-INFO-DIR-ENTRY
++@dircategory Programming tools:
++@direntry
++* Ld: (ld)				The GNU linker
++@end direntry
+ @end format
+ @end ifinfo
+ 
+@@ -1837,11 +1838,11 @@
+ @table @code
+ @item Assignment
+ Semicolons must appear at the end of assignment expressions.
+-@xref{Assignment}
++@xref{Assignment}.
+ 
+ @item PHDRS
+ Semicolons must appear at the end of a @code{PHDRS} statement.
+-@xref{PHDRS}
++@xref{PHDRS}.
+ @end table
+ 
+ @node MEMORY
+@@ -3330,7 +3331,7 @@
+ @node BFD outline
+ @section How it works: an outline of BFD
+ @cindex opening object files
+-@include bfdsumm.texi
++@include ../bfd/doc/bfdsumm.texi
+ @end ifclear
+ 
+ @node Reporting Bugs
