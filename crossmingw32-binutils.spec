@@ -24,8 +24,8 @@ BuildRequires:	sparc32
 %endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		target          i386-mingw32
-%define		arch            %{_prefix}/%{target}
+%define		target		i386-mingw32
+%define		arch		%{_prefix}/%{target}
 
 %description
 crossmingw32 is a complete cross-compiling development system for
