@@ -1,6 +1,6 @@
 Summary:	Mingw32 GNU Binary Utility Development Utilities - binutils
 Name:		crossmingw32-binutils
-Version:	2.10.1.0.4
+Version:	2.10.1.0.7
 Release:	1
 License:	GPL
 Group:		Development/Tools
