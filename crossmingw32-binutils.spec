@@ -17,8 +17,11 @@ BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gettext-devel
-BuildRequires:	perl-devel
-BuildRequires:	texinfo >= 4.2
+# not necessary unless we patch .texi docs; but they are not packaged here anyway
+#BuildRequires:	texinfo >= 4.2
+%ifarch sparc sparc32
+BuildRequires:	sparc32
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		target          i386-mingw32
@@ -46,7 +49,6 @@ Ten pakiet zawiera binutils generuj±ce skro¶nie binaria dla Win32.
 %setup -q -n binutils-%{version}
 
 %build
-rm -rf $RPM_BUILD_ROOT
 cp /usr/share/automake/config.sub .
 
 # Because of a bug in binutils-2.9.1, a cross libbfd.so* is not named
@@ -55,8 +57,12 @@ cp /usr/share/automake/config.sub .
 # [the same applies to binutils 2.10.1.0.4]
 
 # ldscripts won't be generated properly if SHELL is not bash...
-CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
+CFLAGS="%{rpmcflags}" \
+LDFLAGS="%{rpmldflags}" \
 CONFIG_SHELL="/bin/bash" \
+%ifarch sparc
+sparc32 \
+%endif
 ./configure \
 	--prefix=%{_prefix} \
 	--libdir=%{_libdir} \
@@ -66,7 +72,8 @@ CONFIG_SHELL="/bin/bash" \
 	--build=%{_target_platform} \
 	--target=%{target}
 
-%{__make} tooldir=%{_prefix} all
+%{__make} all \
+	tooldir=%{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -75,8 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 	INSTALL='$$s/install-sh -c' \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
-	infodir=$RPM_BUILD_ROOT%{_infodir} \
-	libdir=$RPM_BUILD_ROOT%{_libdir}
+	infodir=$RPM_BUILD_ROOT%{_infodir}
 
 # remove this man page unless we cross-build for netware platform.
 # however, this should be done in Makefiles.
