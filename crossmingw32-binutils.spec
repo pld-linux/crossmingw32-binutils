@@ -1,7 +1,7 @@
 Summary:	Mingw32 Binary Utility Development Utilities - GNU binutils
 Summary(pl):	Zestaw narzêdzi mingw32 - GNU binutils
 Name:		crossmingw32-binutils
-Version:	2.12.90.0.15
+Version:	2.13.90.0.20
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -62,6 +62,7 @@ CONFIG_SHELL="/bin/bash" \
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
+	INSTALL='$$s/install-sh -c' \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
 	infodir=$RPM_BUILD_ROOT%{_infodir} \
