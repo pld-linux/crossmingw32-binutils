@@ -1,13 +1,13 @@
 Summary:	Mingw32 Binary Utility Development Utilities - GNU binutils
 Summary(pl):	Zestaw narzêdzi mingw32 - GNU binutils
 Name:		crossmingw32-binutils
-Version:	2.14.90.0.2
+Version:	2.14.90.0.4
 Release:	1
 License:	GPL
 Group:		Development/Tools
 ExclusiveArch:	%{ix86}
+# Source0-md5:	b7b394b8a001bc3102053b29c9dd44fa
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5: 62b779abb60cc8ce08687fb218b829be
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
