@@ -2,7 +2,7 @@ Summary:	Mingw32 Binary Utility Development Utilities - GNU binutils
 Summary(pl):	Zestaw narzêdzi mingw32 - GNU binutils
 Name:		crossmingw32-binutils
 Version:	2.14.90.0.4.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 ExclusiveArch:	%{ix86}
@@ -12,11 +12,11 @@ BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	perl-devel
-Requires:	crossmingw32-runtime
+BuildRequires:	texinfo >= 4.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		target		i386-mingw32
-%define		arch		%{_prefix}/%{target}
+%define		target          i386-mingw32
+%define		arch            %{_prefix}/%{target}
 
 %description
 crossmingw32 is a complete cross-compiling development system for
@@ -55,9 +55,11 @@ CONFIG_SHELL="/bin/bash" \
 	--libdir=%{_libdir} \
 	--mandir=%{_mandir} \
 	--infodir=%{_infodir} \
+	--host=%{_target_platform} \
+	--build=%{_target_platform} \
 	--target=%{target}
 
-%{__make} tooldir=%{_prefix} EXEEXT="" all
+%{__make} tooldir=%{_prefix} all
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -73,10 +75,16 @@ rm -rf $RPM_BUILD_ROOT
 # however, this should be done in Makefiles.
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
 
+# libiberty.a is ELF not PE
+rm -f $RPM_BUILD_ROOT%{arch}/lib/libiberty.a
+
 %files
 %defattr(644,root,root,755)
+%dir %{arch}
+%dir %{arch}/lib
+%dir %{arch}/bin
 %attr(755,root,root) %{arch}/bin/*
-%{arch}/lib/*
+%{arch}/lib/ldscripts
 %attr(755,root,root) %{_bindir}/%{target}-*
 %{_mandir}/man1/%{target}-*
 
