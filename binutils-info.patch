@@ -103,11 +103,13 @@ diff -urN binutils-2.12.90.0.1.org/gas/doc/as.texinfo binutils-2.12.90.0.1/gas/d
  @ifinfo
  @format
 -START-INFO-DIR-ENTRY
+-* As: (as).                     The GNU assembler.
+-* Gas: (as).                    The GNU assembler.
+-END-INFO-DIR-ENTRY
 +@dircategory Programming tools:
 +@direntry
- * As: (as).                     The GNU assembler.
- * Gas: (as).                    The GNU assembler.
--END-INFO-DIR-ENTRY
++* As: (as).				The GNU assembler
++* Gas: (as).				The GNU assembler
 +@end direntry
  @end format
  @end ifinfo
