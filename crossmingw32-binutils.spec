@@ -2,7 +2,7 @@ Summary:	Mingw32 Binary Utility Development Utilities - GNU binutils
 Summary(pl):	Zestaw narzêdzi mingw32 - GNU binutils
 Name:		crossmingw32-binutils
 Version:	2.11.90.0.19
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
@@ -13,6 +13,7 @@ Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.b
 Patch0:		binutils-info.patch
 BuildRequires:	flex
 BuildRequires:	bison
+BuildRequires:	perl-devel
 BuildRequires:	bash
 Requires:	crossmingw32-platform
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -70,6 +71,10 @@ rm -rf $RPM_BUILD_ROOT
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
 	infodir=$RPM_BUILD_ROOT%{_infodir} \
 	libdir=$RPM_BUILD_ROOT%{_libdir}
+
+# remove this man page unless we cross-build for netware platform.
+# however, this should be done in Makefiles.
+rm -f $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
 
 %files
 %defattr(644,root,root,755)
