@@ -5,12 +5,12 @@ Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla Mingw32 - binutils
 Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
 Summary(tr):	GNU geliþtirme araçlarý - Mingw32 binutils
 Name:		crossmingw32-binutils
-Version:	2.16.91.0.5
+Version:	2.16.91.0.6
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	29fdde06e229672daaaacbf52362520a
+# Source0-md5:	00ef9f1429d5f18702d08552f5c09441
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
@@ -19,9 +19,6 @@ BuildRequires:	flex
 BuildRequires:	gettext-devel
 # not necessary unless we patch .texi docs; but they are not packaged here anyway
 #BuildRequires:	texinfo >= 4.2
-%ifarch sparc sparc32
-BuildRequires:	sparc32
-%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		target		i386-mingw32
@@ -60,9 +57,6 @@ cp /usr/share/automake/config.sub .
 CFLAGS="%{rpmcflags}" \
 LDFLAGS="%{rpmldflags}" \
 CONFIG_SHELL="/bin/bash" \
-%ifarch sparc
-sparc32 \
-%endif
 ./configure \
 	--prefix=%{_prefix} \
 	--libdir=%{_libdir} \
