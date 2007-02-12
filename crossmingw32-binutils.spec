@@ -1,9 +1,9 @@
 Summary:	Cross Mingw32 GNU binary utility development utilities - binutils
-Summary(es):	Utilitarios para desarrollo de binarios de la GNU - Mingw32 binutils
-Summary(fr):	Utilitaires de développement binaire de GNU - Mingw32 binutils
-Summary(pl):	Skro¶ne narzêdzia programistyczne GNU dla Mingw32 - binutils
-Summary(pt_BR):	Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
-Summary(tr):	GNU geliþtirme araçlarý - Mingw32 binutils
+Summary(es.UTF-8):   Utilitarios para desarrollo de binarios de la GNU - Mingw32 binutils
+Summary(fr.UTF-8):   Utilitaires de dÃ©veloppement binaire de GNU - Mingw32 binutils
+Summary(pl.UTF-8):   SkroÅ›ne narzÄ™dzia programistyczne GNU dla Mingw32 - binutils
+Summary(pt_BR.UTF-8):   UtilitÃ¡rios para desenvolvimento de binÃ¡rios da GNU - Mingw32 binutils
+Summary(tr.UTF-8):   GNU geliÅŸtirme araÃ§larÄ± - Mingw32 binutils
 Name:		crossmingw32-binutils
 Version:	2.17.50.0.12
 Release:	1
@@ -33,14 +33,14 @@ with supporting Win32 libraries in 'coff' format from free sources.
 
 This package contains cross targeted binutils.
 
-%description -l pl
-crossmingw32 jest kompletnym systemem do kroskompilacji, pozwalaj±cym
-budowaæ aplikacje MS Windows pod Linuksem u¿ywaj±c bibliotek mingw32.
-System sk³ada siê z binutils, gcc z g++ i objc, libstdc++ - wszystkie
-generuj±ce kod dla platformy i386-mingw32, oraz z bibliotek w formacie
+%description -l pl.UTF-8
+crossmingw32 jest kompletnym systemem do kroskompilacji, pozwalajÄ…cym
+budowaÄ‡ aplikacje MS Windows pod Linuksem uÅ¼ywajÄ…c bibliotek mingw32.
+System skÅ‚ada siÄ™ z binutils, gcc z g++ i objc, libstdc++ - wszystkie
+generujÄ…ce kod dla platformy i386-mingw32, oraz z bibliotek w formacie
 COFF.
 
-Ten pakiet zawiera binutils generuj±ce skro¶nie binaria dla Win32.
+Ten pakiet zawiera binutils generujÄ…ce skroÅ›nie binaria dla Win32.
 
 %prep
 %setup -q -n binutils-%{version}
