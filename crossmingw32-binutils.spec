@@ -1,9 +1,9 @@
 Summary:	Cross Mingw32 GNU binary utility development utilities - binutils
-Summary(es.UTF-8):   Utilitarios para desarrollo de binarios de la GNU - Mingw32 binutils
-Summary(fr.UTF-8):   Utilitaires de développement binaire de GNU - Mingw32 binutils
-Summary(pl.UTF-8):   Skrośne narzędzia programistyczne GNU dla Mingw32 - binutils
-Summary(pt_BR.UTF-8):   Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
-Summary(tr.UTF-8):   GNU geliştirme araçları - Mingw32 binutils
+Summary(es.UTF-8):	Utilitarios para desarrollo de binarios de la GNU - Mingw32 binutils
+Summary(fr.UTF-8):	Utilitaires de développement binaire de GNU - Mingw32 binutils
+Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla Mingw32 - binutils
+Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
+Summary(tr.UTF-8):	GNU geliştirme araçları - Mingw32 binutils
 Name:		crossmingw32-binutils
 Version:	2.17.50.0.12
 Release:	1
