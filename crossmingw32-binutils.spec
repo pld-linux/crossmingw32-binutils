@@ -6,7 +6,7 @@ Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - Mi
 Summary(tr.UTF-8):	GNU geliştirme araçları - Mingw32 binutils
 Name:		crossmingw32-binutils
 Version:	2.17.50.0.12
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
@@ -88,6 +88,9 @@ rm -f $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
 # libiberty.a is ELF not PE
 rm -f $RPM_BUILD_ROOT%{arch}/lib/libiberty.a
 
+# "filesystem" for crossmingw32-* packages (move to crossmingw32-dirs?)
+install -d $RPM_BUILD_ROOT%{arch}/{lib/pkgconfig,share}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -96,8 +99,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %dir %{arch}
 %dir %{arch}/lib
+%dir %{arch}/lib/pkgconfig
 %dir %{arch}/bin
 %attr(755,root,root) %{arch}/bin/*
 %{arch}/lib/ldscripts
+%{arch}/share
 %attr(755,root,root) %{_bindir}/%{target}-*
 %{_mandir}/man1/%{target}-*
