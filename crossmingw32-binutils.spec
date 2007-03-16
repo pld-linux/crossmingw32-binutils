@@ -5,12 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla Mingw32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - Mingw32 binutils
 Name:		crossmingw32-binutils
-Version:	2.17.50.0.12
-Release:	2
+Version:	2.17.50.0.13
+Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	6f3e83399b965d70008860f697c50ec2
+# Source0-md5:	a51c75cae72349b53cd017488113cfa0
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
@@ -89,7 +89,7 @@ rm -f $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
 rm -f $RPM_BUILD_ROOT%{arch}/lib/libiberty.a
 
 # "filesystem" for crossmingw32-* packages (move to crossmingw32-dirs?)
-install -d $RPM_BUILD_ROOT%{arch}/{lib/pkgconfig,share}
+install -d $RPM_BUILD_ROOT%{arch}/lib/pkgconfig
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -103,6 +103,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{arch}/bin
 %attr(755,root,root) %{arch}/bin/*
 %{arch}/lib/ldscripts
-%{arch}/share
 %attr(755,root,root) %{_bindir}/%{target}-*
 %{_mandir}/man1/%{target}-*
