@@ -123,3 +123,53 @@ diff -urN binutils-2.12.90.0.1.org/ld/ld.texinfo binutils-2.12.90.0.1/ld/ld.texi
  @end ifclear
  
  @node Reporting Bugs
+--- binutils-2.18.50.0.5/binutils/doc/binutils.texi.orig	2008-03-14 19:23:02.000000000 +0100
++++ binutils-2.18.50.0.5/binutils/doc/binutils.texi	2008-03-18 08:27:03.340177183 +0100
+@@ -23,29 +23,25 @@
+ @c man end
+ @end copying
+ 
+-@dircategory Software development
++@dircategory Programming tools:
+ @direntry
+-* Binutils: (binutils).         The GNU binary utilities.
+-@end direntry
+-
+-@dircategory Individual utilities
+-@direntry
+-* addr2line: (binutils)addr2line. Convert addresses to file and line.
+-* ar: (binutils)ar.               Create, modify, and extract from archives.
+-* c++filt: (binutils)c++filt.	  Filter to demangle encoded C++ symbols.
+-* cxxfilt: (binutils)c++filt.     MS-DOS name for c++filt.
+-* dlltool: (binutils)dlltool.	  Create files needed to build and use DLLs.
+-* nlmconv: (binutils)nlmconv.     Converts object code into an NLM.
+-* nm: (binutils)nm.               List symbols from object files.
+-* objcopy: (binutils)objcopy.	  Copy and translate object files.
+-* objdump: (binutils)objdump.     Display information from object files.
+-* ranlib: (binutils)ranlib.       Generate index to archive contents.
+-* readelf: (binutils)readelf.	  Display the contents of ELF format files.
+-* size: (binutils)size.           List section sizes and total size.
+-* strings: (binutils)strings.     List printable strings from files.
+-* strip: (binutils)strip.         Discard symbols.
+-* windmc: (binutils)windmc.	  Generator for Windows message resources.
+-* windres: (binutils)windres.	  Manipulate Windows resources.
++* Binutils: (binutils).			The GNU binary utilities
++* addr2line: (binutils)addr2line.	Convert addresses to file and line
++* ar: (binutils)ar.			Create, modify, and extract from archives
++* c++filt: (binutils)c++filt.		Filter to demangle encoded C++ symbols
++* cxxfilt: (binutils)c++filt.		MS-DOS name for c++filt
++* dlltool: (binutils)dlltool.		Create files needed to build and use DLLs
++* nlmconv: (binutils)nlmconv.		Converts object code into an NLM
++* nm: (binutils)nm.			List symbols from object files
++* objcopy: (binutils)objcopy.		Copy and translate object files
++* objdump: (binutils)objdump.		Display information from object files
++* ranlib: (binutils)ranlib.		Generate index to archive contents
++* readelf: (binutils)readelf.		Display the contents of ELF format files
++* size: (binutils)size.			List section sizes and total size
++* strings: (binutils)strings.		List printable strings from files
++* strip: (binutils)strip.		Discard symbols
++* windmc: (binutils)windmc.		Generator for Windows message resources
++* windres: (binutils)windres.		Manipulate Windows resources
+ @end direntry
+ 
+ @titlepage
