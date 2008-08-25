@@ -9,7 +9,7 @@ Version:	2.18.50.0.9
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
-Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.bz2
+Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
 # Source0-md5:	68e3510d9c790b134450c0a243c251cd
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
