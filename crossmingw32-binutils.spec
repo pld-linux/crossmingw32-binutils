@@ -5,12 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla Mingw32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - Mingw32 binutils
 Name:		crossmingw32-binutils
-Version:	2.19.51.0.4
+Version:	2.20.51.0.6
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	7b0d5a4fd434237922aeeab0409f146d
+# Source0-md5:	8a5b135a6dcdd891a32a7c67bb401fe8
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
@@ -58,8 +58,8 @@ CFLAGS="%{rpmcflags}" \
 LDFLAGS="%{rpmldflags}" \
 CONFIG_SHELL="/bin/bash" \
 ./configure \
-	--disable-shared \
 	--disable-nls \
+	--disable-shared \
 	--prefix=%{_prefix} \
 	--libdir=%{_libdir} \
 	--mandir=%{_mandir} \
