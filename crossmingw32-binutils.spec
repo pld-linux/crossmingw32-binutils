@@ -5,12 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla Mingw32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - Mingw32 binutils
 Name:		crossmingw32-binutils
-Version:	2.20.51.0.6
+Version:	2.20.51.0.7
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	8a5b135a6dcdd891a32a7c67bb401fe8
+# Source0-md5:	8b2608344fc9750afe1ff37121681504
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
@@ -97,11 +97,56 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
+# mingw32 directory tree
 %dir %{arch}
 %dir %{arch}/lib
 %dir %{arch}/lib/pkgconfig
 %dir %{arch}/bin
-%attr(755,root,root) %{arch}/bin/*
+# binutils files
+%attr(755,root,root) %{arch}/bin/ar
+%attr(755,root,root) %{arch}/bin/as
+%attr(755,root,root) %{arch}/bin/dlltool
+%attr(755,root,root) %{arch}/bin/ld
+%attr(755,root,root) %{arch}/bin/nm
+%attr(755,root,root) %{arch}/bin/objcopy
+%attr(755,root,root) %{arch}/bin/objdump
+%attr(755,root,root) %{arch}/bin/ranlib
+%attr(755,root,root) %{arch}/bin/strip
 %{arch}/lib/ldscripts
-%attr(755,root,root) %{_bindir}/%{target}-*
-%{_mandir}/man1/%{target}-*
+%attr(755,root,root) %{_bindir}/%{target}-addr2line
+%attr(755,root,root) %{_bindir}/%{target}-ar
+%attr(755,root,root) %{_bindir}/%{target}-as
+%attr(755,root,root) %{_bindir}/%{target}-c++filt
+%attr(755,root,root) %{_bindir}/%{target}-dlltool
+%attr(755,root,root) %{_bindir}/%{target}-dllwrap
+%attr(755,root,root) %{_bindir}/%{target}-elfedit
+%attr(755,root,root) %{_bindir}/%{target}-gprof
+%attr(755,root,root) %{_bindir}/%{target}-ld
+%attr(755,root,root) %{_bindir}/%{target}-nm
+%attr(755,root,root) %{_bindir}/%{target}-objcopy
+%attr(755,root,root) %{_bindir}/%{target}-objdump
+%attr(755,root,root) %{_bindir}/%{target}-ranlib
+%attr(755,root,root) %{_bindir}/%{target}-readelf
+%attr(755,root,root) %{_bindir}/%{target}-size
+%attr(755,root,root) %{_bindir}/%{target}-strings
+%attr(755,root,root) %{_bindir}/%{target}-strip
+%attr(755,root,root) %{_bindir}/%{target}-windmc
+%attr(755,root,root) %{_bindir}/%{target}-windres
+%{_mandir}/man1/%{target}-addr2line.1*
+%{_mandir}/man1/%{target}-ar.1*
+%{_mandir}/man1/%{target}-as.1*
+%{_mandir}/man1/%{target}-c++filt.1*
+%{_mandir}/man1/%{target}-dlltool.1*
+%{_mandir}/man1/%{target}-elfedit.1*
+%{_mandir}/man1/%{target}-gprof.1*
+%{_mandir}/man1/%{target}-ld.1*
+%{_mandir}/man1/%{target}-nm.1*
+%{_mandir}/man1/%{target}-objcopy.1*
+%{_mandir}/man1/%{target}-objdump.1*
+%{_mandir}/man1/%{target}-ranlib.1*
+%{_mandir}/man1/%{target}-readelf.1*
+%{_mandir}/man1/%{target}-size.1*
+%{_mandir}/man1/%{target}-strings.1*
+%{_mandir}/man1/%{target}-strip.1*
+%{_mandir}/man1/%{target}-windmc.1*
+%{_mandir}/man1/%{target}-windres.1*
