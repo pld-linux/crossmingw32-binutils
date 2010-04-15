@@ -5,12 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla Mingw32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - Mingw32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - Mingw32 binutils
 Name:		crossmingw32-binutils
-Version:	2.20.51.0.7
+Version:	2.20.51.0.8
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	8b2608344fc9750afe1ff37121681504
+# Source0-md5:	4953e8250e496180e53debecfefbc50e
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
@@ -84,6 +84,9 @@ rm -rf $RPM_BUILD_ROOT
 # remove this man page unless we cross-build for netware platform.
 # however, this should be done in Makefiles.
 rm -f $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
+
+# some ld/Makefile quirk
+mv -f $RPM_BUILD_ROOT%{arch}/bin/%{target}-ld $RPM_BUILD_ROOT%{arch}/bin/ld
 
 # libiberty.a is ELF not PE
 rm -f $RPM_BUILD_ROOT%{arch}/lib/libiberty.a
