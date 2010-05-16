@@ -17,8 +17,8 @@ BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gettext-devel
-# not necessary unless we patch .texi docs; but they are not packaged here anyway
-#BuildRequires:	texinfo >= 4.2
+BuildRequires:	perl-tools-pod
+BuildRequires:	texinfo >= 4.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		target		i386-mingw32
