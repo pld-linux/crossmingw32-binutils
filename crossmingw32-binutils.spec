@@ -5,12 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - MinGW32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - MinGW32 binutils
 Name:		crossmingw32-binutils
-Version:	2.21.51.0.2
+Version:	2.21.51.0.4
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
 Source0:	ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.bz2
-# Source0-md5:	77159c22d0fcb07446382ab65e50d030
+# Source0-md5:	4a462be596b2c4d6b906dff713b7916a
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
@@ -83,10 +83,10 @@ rm -rf $RPM_BUILD_ROOT
 
 # remove this man page unless we cross-build for netware platform.
 # however, this should be done in Makefiles.
-rm -f $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
+%{__rm} $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
 
 # libiberty.a is ELF not PE
-rm -f $RPM_BUILD_ROOT%{arch}/lib/libiberty.a
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libiberty.a
 
 # "filesystem" for crossmingw32-* packages (move to crossmingw32-dirs?)
 install -d $RPM_BUILD_ROOT%{arch}/lib/pkgconfig
@@ -107,6 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{arch}/bin/as
 %attr(755,root,root) %{arch}/bin/dlltool
 %attr(755,root,root) %{arch}/bin/ld
+%attr(755,root,root) %{arch}/bin/ld.bfd
 %attr(755,root,root) %{arch}/bin/nm
 %attr(755,root,root) %{arch}/bin/objcopy
 %attr(755,root,root) %{arch}/bin/objdump
@@ -122,6 +123,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{target}-elfedit
 %attr(755,root,root) %{_bindir}/%{target}-gprof
 %attr(755,root,root) %{_bindir}/%{target}-ld
+%attr(755,root,root) %{_bindir}/%{target}-ld.bfd
 %attr(755,root,root) %{_bindir}/%{target}-nm
 %attr(755,root,root) %{_bindir}/%{target}-objcopy
 %attr(755,root,root) %{_bindir}/%{target}-objdump
