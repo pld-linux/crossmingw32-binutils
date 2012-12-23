@@ -5,12 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - MinGW32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - MinGW32 binutils
 Name:		crossmingw32-binutils
-Version:	2.23.51.0.7
+Version:	2.23.51.0.8
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
 Source0:	http://www.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.xz
-# Source0-md5:	5f879f85ff5dafb1eaaa15c0943e8163
+# Source0-md5:	69331066607e87c2595dd1ecb01d564d
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
