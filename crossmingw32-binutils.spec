@@ -5,12 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - MinGW32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - MinGW32 binutils
 Name:		crossmingw32-binutils
-Version:	2.23.51.0.8
+Version:	2.23.51.0.9
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
 Source0:	http://www.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.xz
-# Source0-md5:	69331066607e87c2595dd1ecb01d564d
+# Source0-md5:	287f50acc495cb01624e6f8312795e2c
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	automake
 BuildRequires:	bash
@@ -89,6 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 
 # libiberty.a is ELF not PE
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/libiberty.a
+
+# not prefixed, keep infos only from native packages
+%{__rm} -r $RPM_BUILD_ROOT%{_infodir}
 
 # "filesystem" for crossmingw32-* packages (move to crossmingw32-dirs?)
 install -d $RPM_BUILD_ROOT%{arch}/lib/pkgconfig
