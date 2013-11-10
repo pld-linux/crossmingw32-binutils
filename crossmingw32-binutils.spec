@@ -5,14 +5,15 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - MinGW32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - MinGW32 binutils
 Name:		crossmingw32-binutils
-Version:	2.23.52.0.2
+Version:	2.24.51.0.1
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
-Source0:	http://www.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.xz
-# Source0-md5:	7a1649bc101c18434efe6feb86a03d98
+Source0:	https://www.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.xz
+# Source0-md5:	1c2c7ef4e75b569a8d1a89a928629c30
 URL:		http://sources.redhat.com/binutils/
-BuildRequires:	automake >= 2.64
+BuildRequires:	autoconf >= 2.64
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
@@ -86,9 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 # remove this man page unless we cross-build for netware platform.
 # however, this should be done in Makefiles.
 %{__rm} $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
-
-# libiberty.a is ELF not PE
-%{__rm} $RPM_BUILD_ROOT%{_libdir}/libiberty.a
 
 # not prefixed, keep infos only from native packages
 %{__rm} -r $RPM_BUILD_ROOT%{_infodir}
