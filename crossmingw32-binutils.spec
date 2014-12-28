@@ -18,7 +18,7 @@ BuildRequires:	automake >= 1:1.11
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	perl-tools-pod
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo >= 4.2
