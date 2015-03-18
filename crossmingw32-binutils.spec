@@ -5,13 +5,15 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - MinGW32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - MinGW32 binutils
 Name:		crossmingw32-binutils
-Version:	2.24.51.0.4
+Version:	2.25.51.0.1
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
 #Source0:	https://www.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.xz
-Source0:	binutils-%{version}.tar.bz2
-# Source0-md5:	a44a86209c84e2072824183c4b0a11f4
+Source0:	binutils-%{version}.tar.xz
+# Source0-md5:	4d3bd9694a1c9c318e7afe6db4a23b69
+Patch0:		binutils-libdir.patch
+Patch1:		binutils-am.patch
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	autoconf >= 2.64
 BuildRequires:	automake >= 1:1.11
@@ -48,14 +50,31 @@ Ten pakiet zawiera binutils generujące skrośnie binaria dla Win32.
 
 %prep
 %setup -q -n binutils-%{version}
+%patch0 -p1
+%patch1 -p1
+
+# file contains hacks for ac 2.64 only
+%{__rm} config/override.m4
+%{__sed} -i '/^m4_include(config\/override\.m4/d' configure.ac
 
 %build
-cp /usr/share/automake/config.sub .
+cp -f /usr/share/automake/config.* .
+%{__aclocal}
+%{__autoconf}
 
-# Because of a bug in binutils-2.9.1, a cross libbfd.so* is not named
-# lib<target>bfd.so*. To prevent confusion with native binutils, we
-# forget about shared libraries right now, and do not install libbfd.a
-# [the same applies to binutils 2.10.1.0.4]
+# non-standard regeneration (needed because of libdir patch)
+# AM_BINUTILS_WARNINGS in bfd/warning.m4, ZW_GNU_GETTEXT_SISTER_DIR in config/gettext-sister.m4
+for dir in gas bfd; do
+	cd $dir || exit 1
+	%{__aclocal} -I .. -I ../config -I ../bfd
+	%{__automake} Makefile
+	%{__automake} doc/Makefile
+	%{__autoconf}
+	cd ..
+done
+
+# We don't install libbfd (nor use shared binutils libraries) to avoid
+# conflict with native binutils.
 
 # ldscripts won't be generated properly if SHELL is not bash...
 CFLAGS="%{rpmcflags}" \

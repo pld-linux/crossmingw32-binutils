@@ -1,0 +1,22 @@
+--- binutils-2.23.51.0.9/gas/doc/Makefile.am.orig	2013-02-04 21:04:42.928606932 +0100
++++ binutils-2.23.51.0.9/gas/doc/Makefile.am	2013-02-04 21:31:30.648573422 +0100
+@@ -17,7 +17,7 @@
+ # <http://www.gnu.org/licenses/>.
+ #
+ 
+-AUTOMAKE_OPTIONS = 1.8 cygnus
++AUTOMAKE_OPTIONS = 1.8
+ 
+ # What version of the manual you want; "all" includes everything
+ CONFIG=all
+--- binutils-2.23.51.0.9/bfd/doc/Makefile.am.orig	2013-02-02 00:24:54.000000000 +0100
++++ binutils-2.23.51.0.9/bfd/doc/Makefile.am	2013-02-05 19:33:46.556919813 +0100
+@@ -17,7 +17,7 @@
+ # <http://www.gnu.org/licenses/>.
+ #
+ 
+-AUTOMAKE_OPTIONS = 1.9 cygnus
++AUTOMAKE_OPTIONS = 1.9
+ 
+ DOCFILES = aoutx.texi  archive.texi archures.texi \
+ 	bfdt.texi  cache.texi coffcode.texi \

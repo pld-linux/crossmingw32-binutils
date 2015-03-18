@@ -1,0 +1,45 @@
+--- binutils-2.25.51.0.1/bfd/Makefile.am.orig	2015-03-15 11:04:52.000000000 +0100
++++ binutils-2.25.51.0.1/bfd/Makefile.am	2015-03-17 20:08:55.482838510 +0100
+@@ -46,7 +46,7 @@
+ WARN_CFLAGS = @WARN_CFLAGS@
+ NO_WERROR = @NO_WERROR@
+ AM_CFLAGS = $(WARN_CFLAGS)
+-AM_CPPFLAGS = -DBINDIR='"$(bindir)"'
++AM_CPPFLAGS = -DBINDIR='"$(bindir)"' -DLIBDIR='"$(libdir)"'
+ if PLUGINS
+ bfdinclude_HEADERS += $(INCDIR)/plugin-api.h
+ LIBDL = @lt_cv_dlopen_libs@
+--- binutils-2.25.51.0.1/bfd/plugin.c.orig	2015-03-15 11:04:52.000000000 +0100
++++ binutils-2.25.51.0.1/bfd/plugin.c	2015-03-17 21:03:28.116034504 +0100
+@@ -404,8 +404,7 @@
+ static int
+ load_plugin (bfd *abfd)
+ {
+-  char *plugin_dir;
+-  char *p;
++  const char *p = LIBDIR "/bfd-plugins";
+   DIR *d;
+   struct dirent *ent;
+   int found = 0;
+@@ -416,13 +415,6 @@
+   if (plugin_program_name == NULL)
+     return 0;
+ 
+-  plugin_dir = concat (BINDIR, "/../lib/bfd-plugins", NULL);
+-  p = make_relative_prefix (plugin_program_name,
+-			    BINDIR,
+-			    plugin_dir);
+-  free (plugin_dir);
+-  plugin_dir = NULL;
+-
+   d = opendir (p);
+   if (!d)
+     goto out;
+@@ -441,7 +433,6 @@
+     }
+ 
+  out:
+-  free (p);
+   if (d)
+     closedir (d);
+ 
