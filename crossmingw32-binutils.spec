@@ -5,13 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - MinGW32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - MinGW32 binutils
 Name:		crossmingw32-binutils
-Version:	2.25.51.0.2
+Version:	2.26
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
-#Source0:	https://www.kernel.org/pub/linux/devel/binutils/binutils-%{version}.tar.xz
-Source0:	binutils-%{version}.tar.xz
-# Source0-md5:	c0b0040913d1256ce033093418a1f3d6
+Source0:	http://ftp.gnu.org/gnu/binutils/binutils-%{version}.tar.bz2
+# Source0-md5:	64146a0faa3b411ba774f47d41de239f
 Patch0:		binutils-libdir.patch
 Patch1:		binutils-am.patch
 URL:		http://sources.redhat.com/binutils/
@@ -135,6 +134,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{arch}/bin/objcopy
 %attr(755,root,root) %{arch}/bin/objdump
 %attr(755,root,root) %{arch}/bin/ranlib
+%attr(755,root,root) %{arch}/bin/readelf
 %attr(755,root,root) %{arch}/bin/strip
 %{arch}/lib/ldscripts
 %attr(755,root,root) %{_bindir}/%{target}-addr2line

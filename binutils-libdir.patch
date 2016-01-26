@@ -1,6 +1,6 @@
---- binutils-2.25.51.0.1/bfd/Makefile.am.orig	2015-03-15 11:04:52.000000000 +0100
-+++ binutils-2.25.51.0.1/bfd/Makefile.am	2015-03-17 20:08:55.482838510 +0100
-@@ -52,7 +52,7 @@ ZLIBINC = @zlibinc@
+--- binutils-2.26/bfd/Makefile.am.orig	2016-01-26 21:10:01.893801762 +0100
++++ binutils-2.26/bfd/Makefile.am	2016-01-26 21:10:42.507133384 +0100
+@@ -52,7 +52,7 @@
  WARN_CFLAGS = @WARN_CFLAGS@
  NO_WERROR = @NO_WERROR@
  AM_CFLAGS = $(WARN_CFLAGS) $(ZLIBINC)
