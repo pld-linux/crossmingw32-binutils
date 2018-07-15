@@ -5,14 +5,13 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - MinGW32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - MinGW32 binutils
 Name:		crossmingw32-binutils
-Version:	2.30
+Version:	2.31
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/binutils/binutils-%{version}.tar.lz
-# Source0-md5:	e64eb5655c6c2caa78677e19c84ba5b5
+# Source0-md5:	1ea8ddd13bd6fdcab1fe6cf377894476
 Patch0:		binutils-libdir.patch
-Patch1:		binutils-am.patch
 URL:		http://sources.redhat.com/binutils/
 BuildRequires:	autoconf >= 2.64
 BuildRequires:	automake >= 1:1.11
@@ -50,7 +49,6 @@ Ten pakiet zawiera binutils generujące skrośnie binaria dla Win32.
 %prep
 %setup -q -n binutils-%{version}
 %patch0 -p1
-%patch1 -p1
 
 # file contains hacks for ac 2.64 only
 %{__rm} config/override.m4
@@ -102,10 +100,6 @@ rm -rf $RPM_BUILD_ROOT
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
 	infodir=$RPM_BUILD_ROOT%{_infodir} \
 	libdir=$RPM_BUILD_ROOT%{_libdir}
-
-# remove this man page unless we cross-build for netware platform.
-# however, this should be done in Makefiles.
-%{__rm} $RPM_BUILD_ROOT%{_mandir}/man1/*nlmconv.1
 
 # not prefixed, keep infos only from native packages
 %{__rm} -r $RPM_BUILD_ROOT%{_infodir}
