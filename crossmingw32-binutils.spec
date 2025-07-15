@@ -5,12 +5,12 @@ Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW32 - binutil
 Summary(pt_BR.UTF-8):	Utilitários para desenvolvimento de binários da GNU - MinGW32 binutils
 Summary(tr.UTF-8):	GNU geliştirme araçları - MinGW32 binutils
 Name:		crossmingw32-binutils
-Version:	2.43.1
+Version:	2.44
 Release:	1
 License:	GPL v3+
 Group:		Development/Tools
-Source0:	https://ftp.gnu.org/gnu/binutils/binutils-%{version}.tar.lz
-# Source0-md5:	02e842be7201e2a2d997c85d61b20d1b
+Source0:	https://ftp.gnu.org/gnu/binutils/binutils-with-gold-%{version}.tar.lz
+# Source0-md5:	cd67415c0ebc4ab158ad1c6961e1dc55
 URL:		http://www.sourceware.org/binutils/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.11
@@ -24,6 +24,7 @@ BuildRequires:	msgpack-devel
 BuildRequires:	perl-tools-pod
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo >= 6.3
+BuildRequires:	xxHash-devel
 BuildRequires:	zstd-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,7 +50,7 @@ COFF.
 Ten pakiet zawiera binutils generujące skrośnie binaria dla Win32.
 
 %prep
-%setup -q -n binutils-%{version}
+%setup -q -n binutils-with-gold-%{version}
 
 # file contains hacks for ac 2.69 only
 %{__rm} config/override.m4
