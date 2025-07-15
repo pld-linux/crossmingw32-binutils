@@ -25,7 +25,8 @@ BuildRequires:	perl-tools-pod
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo >= 6.3
 BuildRequires:	xxHash-devel
-BuildRequires:	zstd-devel
+BuildRequires:	zstd-devel >= 1.4.0
+Requires:	zstd >= 1.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		target		i386-mingw32
